@@ -1,7 +1,7 @@
 # Url Info
 
 
-Retrieve full page-load and asset information for a given `url` in `.har` format
+Retrieve full page-load and asset information for a given url in `.har` format
 
 
 ## Dependencies
@@ -14,7 +14,7 @@ Retrieve full page-load and asset information for a given `url` in `.har` format
 
 [browsermob-proxy-py](https://github.com/AutomatedTester/browsermob-proxy-py)	
 
-## Usage
+## Usage Example
 
 If you want to to get information for the page `'https://en.wikipedia.org/wiki/Python_(programming_language)'` and save it as  `wiki.har` type:
 
