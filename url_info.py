@@ -19,6 +19,7 @@ Application to retrieve url-page load infomation and store it in a .har-type fil
 import json
 from selenium import webdriver
 from browsermobproxy import Server
+import sys
 
 
 def get_har_file(url, name):
@@ -38,7 +39,7 @@ def get_har_file(url, name):
     """
 
     # Start a a browserobproxy server instance
-    server = Server("/path/to/browsermob-proxy")
+    server = Server("/home/jkb/Downloads/browsermob-proxy-2.1.4/bin/browsermob-proxy")
     server.start()
     proxy = server.create_proxy()
 
@@ -80,7 +81,9 @@ def save_to_file(result, name):
 
 
 if __name__ == "__main__":
-    name = 'wiki'
-    url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
+    # name = 'wiki'
+    # url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
+    name = str(sys.argv[1])
+    url = str(sys.argv[2])
     result = get_har_file(url, name)
     save_to_file(result, name)
