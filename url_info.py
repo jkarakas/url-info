@@ -67,7 +67,7 @@ def save_to_file(result, name):
     Parameters
     ----------
     result : json object
-        terieved har in json format
+        retrieved har in json format
     name : string
         the name of the har file that wil be used
 
@@ -81,5 +81,6 @@ def save_to_file(result, name):
 
 if __name__ == "__main__":
     name = 'wiki'
-    result = get_har_file("https://en.wikipedia.org/wiki/Python_(programming_language)", name)
+    url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
+    result = get_har_file(url, name)
     save_to_file(result, name)
