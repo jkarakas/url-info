@@ -20,6 +20,7 @@ import json
 from selenium import webdriver
 from browsermobproxy import Server
 import sys
+import os
 
 
 def get_har_file(url, name):
@@ -39,7 +40,7 @@ def get_har_file(url, name):
     """
 
     # Start a a browserobproxy server instance
-    server = Server("/home/jkb/Downloads/browsermob-proxy-2.1.4/bin/browsermob-proxy")
+    server = Server("./browsermob-proxy-2.1.4/bin/browsermob-proxy")
     server.start()
     proxy = server.create_proxy()
 
@@ -87,3 +88,4 @@ if __name__ == "__main__":
     url = str(sys.argv[2])
     result = get_har_file(url, name)
     save_to_file(result, name)
+    print(f'Url load and asset information succesfully retrieved and saved at path {os.path.realpath(name)}.har')
