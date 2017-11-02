@@ -16,11 +16,11 @@ Retrieve full page-load and asset information for a given `url` in `.har` format
 
 ## Usage
 
-To get information for the page `'https://en.wikipedia.org/wiki/Python_(programming_language)' and save it as  `wiki.har`:
+If you want to to get information for the page `'https://en.wikipedia.org/wiki/Python_(programming_language)'` and save it as  `wiki.har` type:
 
 ```
 python url_info.py 'wiki' 'https://en.wikipedia.org/wiki/Python_(programming_language)'
 
 ```
 
-You can visit this site to check the information in the har file : http://www.softwareishard.com/har/viewer/ or use [Haralyzer](https://pypi.python.org/pypi/haralyzer) to parse the information programatically.
+You can visit http://www.softwareishard.com/har/viewer/ for a quick visual overview of the `har` file or use [Haralyzer](https://pypi.python.org/pypi/haralyzer) to parse the information programatically.
